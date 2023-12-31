@@ -118,7 +118,8 @@ ips = []
 def manipulate(xml):
     xml_text = etree.tostring(xml, encoding="unicode")
     for old, new in changes.items():
-        xml_text = xml_text.replace(old, new)
+        pattern = re.compile(fr'\b{old}\b')
+        xml_text = re.sub(pattern,new,xml_text)
     modified_root = etree.fromstring(xml_text)
     return modified_root, None,None
 
