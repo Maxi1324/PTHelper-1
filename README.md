@@ -1,12 +1,16 @@
 ## Packet Tracer Helper
 
+![alt](imgs/HomeScreen.png)
+
 Aim of this project was to make it easy to cheat in Packet Tracer Activities
-This was a little side project, so the code is not tested very well, and kind of ugly
+This was a little side project, so the code is not tested very well, and kinda ugly
+
+The workflow is that you get the solved exercise and manipulate the file so it seems like you have done it
 
 my code is based on the amazing work of mircodezorzi:
 https://github.com/mircodezorzi/pka2xml
 
-he is a hero
+he is a hero!!!
 
 ###
 warning: device switch should always only used alone with no other maipulation results in some errors
@@ -88,6 +92,22 @@ gives it best at renaming or renumbering ipv4 ACLs
 
 10. change ACLIpv6
 gives it best at renaming or renumbering ipv6 ACLs
+
+### Screenshots
+
+![alt](imgs/FileSelect.png)
+Here you can select your base file press the image in the middle and you are promted with a filechooser
+
+![alt](imgs/HomeScreen.png)
+here you can edit and add manipulations and do the export
+
+![alt](imgs/Manis.png)
+here are all possible manipulations
+
+![alt](imgs/ChangeIpInAction.png)
+here are all possible manipulations
+![alt](imgs/Finshed.png)
+after the finished export
 
 ### development
 
