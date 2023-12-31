@@ -11,6 +11,8 @@ he is a hero
 ###
 warning: device switch should always only used alone with no other maipulation results in some errors
 
+so always do it in two export steps(if you are using device switch)
+
 ### install 
 
 #### windows install
@@ -22,7 +24,7 @@ warning: device switch should always only used alone with no other maipulation r
 1 python 3.9.7 
 ``` shell
     py -m venv pka_env
-    env\Scripts\activate
+    pka_env\Scripts\activate
     pip install pyinstaller PyQt5 docker lxml importlib-metadata matplotlib networkx
     py Gui2.py
 ```
