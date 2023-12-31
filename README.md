@@ -1,4 +1,4 @@
-## Packet Tracer Helper
+## PTHelper
 
 ![alt](imgs/HomeScreen.png)
 
@@ -21,7 +21,7 @@ so always do it in two export steps(if you are using device switch)
 
 #### windows install
 1. download the newest release
-2. execute the PacketTracerHelper.exe file
+2. execute the PtHelper.exe or the Gui2.exe file
     - keep in mind, that you need also the "internal" folder, so don't delete it
 
 #### platform independet:
