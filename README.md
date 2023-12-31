@@ -13,8 +13,8 @@ https://github.com/mircodezorzi/pka2xml
 he is a hero!!!
 
 ### it'n not a virus
-![image](https://github.com/SwagmasterSwag/PTHelper/assets/149953265/d291edcb-0ec2-48ab-850b-ef3ac58dca59)
-just press on more an execute
+![image](https://github.com/SwagmasterSwag/PTHelper/assets/149953265/d291edcb-0ec2-48ab-850b-ef3ac58dca59)<br>
+just press on "more" and press execute. It is open source so you can check what you are executing
 
 ###
 warning: device switch should always only used alone with no other maipulation results in some errors
