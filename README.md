@@ -95,18 +95,18 @@ gives it best at renaming or renumbering ipv6 ACLs
 
 ### Screenshots
 
-![alt](imgs/FileSelect.png)
+![alt](imgs/FileSelect.png)<br>
 Here you can select your base file press the image in the middle and you are promted with a filechooser
 
-![alt](imgs/HomeScreen.png)
+![alt](imgs/HomeScreen.png)<br>
 here you can edit and add manipulations and do the export
 
-![alt](imgs/Manis.png)
+![alt](imgs/Manis.png)<br>
 here are all possible manipulations
 
-![alt](imgs/ChangeIpInAction.png)
+![alt](imgs/ChangeIpInAction.png)<br>
 here are all possible manipulations
-![alt](imgs/Finshed.png)
+![alt](imgs/Finshed.png)<br>
 after the finished export
 
 ### development
