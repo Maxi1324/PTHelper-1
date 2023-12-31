@@ -67,11 +67,7 @@ class PkaHelper:
         print("is native: "+str(native))
         if native:
             import sys
-            p = ""
-            if hasattr(sys, '_MEIPASS'):
-                p = sys._MEIPASS
-            else:
-                p = os.getcwd()
+            p = os.getcwd()
             os.system(f"{p}\\PkaHelper.exe {mode} files/{source} files/{result}")
         else:
             self.container.exec_run(f"pka2xml {mode} files/{source} files/{result}",tty=True)
