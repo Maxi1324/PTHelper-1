@@ -9,7 +9,7 @@ import base64
 import json
 import requests
 import zlib
-
+from PyQt5.QtWidgets import QMessageBox
 class PkaHelper:
 
     def __init__(self, container_name="hi8", image_name="jaja:3.0.0"):
@@ -31,16 +31,11 @@ class PkaHelper:
                 msg.setIcon(QMessageBox.Information)
                 msg.addButton(QMessageBox.Ok)
                 msg.exec()
-
             if(self.container.status != "running"):
                 self.container.start()
         
 
     def _get_or_create_container(self, container_name, image_name):
-        random = str(random.randint(0, 1000000))
-        container_name = "pkahelper"+random
-       # if not self.client.images.list(image_name):
-        #    self.client.images.build(path="pka2xmldocker/.", tag=image_name)
 
         volumes = {self.work_dir: {'bind': "/workspace/files", 'mode': 'rw'}}
 

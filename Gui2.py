@@ -25,6 +25,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QVBoxLayout, QListWidget, QPushButton, QMenu, QAction
 from PyQt5.QtWidgets import QApplication, QMessageBox
 
+import os
 
 
 class ModernUI(QMainWindow):
@@ -205,7 +206,9 @@ class ModernUI(QMainWindow):
             p = sys._MEIPASS
         else:
             p = os.getcwd()
-        pixmap = QPixmap(p+"\\FileIcon.png") 
+
+        
+        pixmap = QPixmap(os.path.join(p,"FileIcon.png")) 
         label.setPixmap(pixmap)
 
         label.setScaledContents(True) 
