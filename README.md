@@ -37,6 +37,9 @@ so always do it in two export steps(if you are using device switch)
     py Gui2.py
 ```
 2. install docker and have the deamon running
+3. if you are using linux the permission handeling can be quite challenging(docker container creates files under some user and the application tries to access those under another user but the applciation still needs to controll the docker deamon etc.) keep the permission stuff in mind when using. If you don't care just use sudo (or depending on the distro sudo -s before execution)
+
+a possible improvement could be to do the linux decryption and encryption also nativly 
 
 ### description
 
