@@ -2,134 +2,138 @@
 
 ![alt](imgs/HomeScreen.png)
 
-Aim of this project was to make it easy to cheat in Packet Tracer Activities
-This was a little side project, so the code is not tested very well, and kinda ugly
+The aim of this project is to make it easy to cheat in Packet Tracer activities.
+This was a small side project, so the code is not thoroughly tested and is a bit messy.
 
-The workflow is that you get the solved exercise and manipulate the file so it seems like you have done it
+The workflow is simple: you obtain the solved exercise and manipulate the file so it appears as if you completed it yourself.
 
-my code is based on the amazing work of mircodezorzi:
-https://github.com/mircodezorzi/pka2xml
+This code is based on the amazing work of mircodezorzi:
+[https://github.com/mircodezorzi/pka2xml](https://github.com/mircodezorzi/pka2xml)
 
-he is a hero!!!
+He is a hero!!!
 
-### it'n not a virus
-![image](https://github.com/SwagmasterSwag/PTHelper/assets/149953265/d291edcb-0ec2-48ab-850b-ef3ac58dca59)<br>
-just press on "more" and press execute. It is open source so you can check what you are executing
+### It's not a virus
 
-###
-warning: device switch should always only used alone with no other maipulation results in some errors
+![image](https://github.com/SwagmasterSwag/PTHelper/assets/149953265/d291edcb-0ec2-48ab-850b-ef3ac58dca59 | width=100)<br>
+Just click **More** and then **Execute**. It’s open source, so you can verify what you’re running.
 
-so always do it in two export steps(if you are using device switch)
+### Warning
 
-### install 
+The **Device Switch** should always be used alone without other manipulations; otherwise, errors may occur.
 
-#### windows install
-1. download the newest release
-2. execute the PtHelper.exe or the Gui2.exe file
-    - keep in mind, that you need also the "internal" folder, so don't delete it
+If you use the Device Switch, perform the export in **two steps**.
 
-#### platform independet:
-1 python 3.9.7 
-``` shell
-    py -m venv pka_env
-    pka_env\Scripts\activate
-    pip install pyinstaller PyQt5 docker lxml importlib-metadata matplotlib networkx
-    py Gui2.py
+### Install
+
+#### Windows install
+
+1. Download the newest release.
+2. Execute **PtHelper.exe** or **Gui2.exe**.
+
+   * Keep in mind that you also need the **internal** folder. Don’t delete it.
+
+#### Platform independent
+
+1. Python 3.9.7
+
+```shell
+py -m venv pka_env
+pka_env\Scripts\activate
+pip install pyinstaller PyQt5 docker lxml importlib-metadata matplotlib networkx
+py Gui2.py
 ```
-2. install docker and have the deamon running
-3. if you are using linux the permission handeling can be quite challenging(docker container creates files under some user and the application tries to access those under another user but the applciation still needs to controll the docker deamon etc.) keep the permission stuff in mind when using. If you don't care just use sudo (or depending on the distro sudo -s before execution)
 
-a possible improvement could be to do the linux decryption and encryption also nativly 
+2. Install Docker and make sure the daemon is running.
+3. On Linux, permission handling can be tricky (the Docker container may create files under one user while the application accesses them under another, and the app still needs to control the Docker daemon). Keep permissions in mind. If you don’t care, just use `sudo` (or, depending on the distro, `sudo -s` before execution).
 
-### description
+A possible improvement would be to perform Linux decryption and encryption natively as well.
 
-This project allows you to cheat in any Packet Tracer activity you need to cheat on. If functionalities are missing, you can implement them yourself, very easily, and hopefully contribute to this project :)
+### Description
 
-After starting, you will be prompted with the start screen. There, you need to click on the big button in the middle, and then select your start file (the activity file or a colleague's Packet Tracer file).
+This project allows you to cheat in any Packet Tracer activity you need to. If functionalities are missing, you can easily implement them yourself—and hopefully contribute to this project. :)
 
-Next, you'll be on the manipulation screen. On the right, you'll find all the current manipulations, initially none. You can add some by using the "Add Manipulation" button.
+After starting, you’ll see the start screen. Click the big button in the middle and select your start file (the activity file or a colleague’s Packet Tracer file).
 
-Then, you'll be prompted to select one and press "Add."
+Next, you’ll be on the manipulation screen. On the right, you’ll find all current manipulations—initially none. Add some by using the **Add Manipulation** button.
 
-By clicking on the manipulation in the manipulation screen, you can access the settings of the manipulation.
+You’ll then be prompted to select one and press **Add**.
 
-The last functionality is the "Export" button. This applies all manipulations and creates a new Packet Tracer file with all the changes :)
+By clicking a manipulation in the manipulation screen, you can access its settings.
 
-If you find a bug, pleace report them in an github issue on this repo
+The last step is the **Export** button. This applies all manipulations and creates a new Packet Tracer file with the changes. :)
 
-### currently implemented maipulations
-1.  Reset File Name History
+If you find a bug, please report it as a GitHub issue in this repo.
 
-A Packet Tracer File saves always, when it can it's current location or file. This Manipulation allows you to change that. You can remove entries or add them
+### Currently implemented manipulations
 
-2. Device Switch
+1. **Reset File Name History**
+   A Packet Tracer file saves its current location or file whenever it can. This manipulation allows you to change that. You can remove entries or add them.
 
-Often Teachers disable the copying of devices form one file to another, or they request you to upload the file at the start of the activity and at the end. They do this, so they can identify if this activity is done by you. This Manipulation allows you to bypass this.
+2. **Device Switch**
+   Teachers often disable copying devices from one file to another, or they require you to upload the file at the start and end of the activity to verify authorship. This manipulation lets you bypass that.
+   Your first selected file is the device **source** and the second is the **destination**, as selected in the settings dialog.
 
-your first selected file is the device source the the second the destination, s the file you select in the settings diialog
+3. **Change User Informations**
+   Many Cisco activities are not personalized; their only security mechanism is internal to Packet Tracer. When user settings are changed, the activity is reset. This manipulation bypasses that.
+   You can change the email, username, and external information.
 
-3. Change User Informations
+4. **Change IPv4 Addresses**
+   This replaces IPv4 addresses. It actually searches for anything in the Packet Tracer file that looks like an IP address (including broadcast addresses, wildcard masks, router IDs, etc.).
+   Be careful—this manipulation has a lot of potential.
 
-Many Cisco Activites are not personaliesd to any extent their only security mechanisms is the packet tracer internal one. When the User Settings are changed the activity is reset. This manipulation bypasses this.
+5. **Change IPv6 Addresses**
+   Exactly the same as changing IPv4 addresses, but for IPv6.
 
-you can change the email, username, and external informations
+*These were the good ones; the rest works, but really poorly:*
 
-4. Change Ipv4 Addresses
+6. **Change DB Grading**
+   Sets the percentage to 100% by removing the criteria. If the auditor doesn’t check them one by one, it works. If they do, they will notice.
 
-This allows you to replace ipv4 Addresses actuially is searches in the packet tracer file for anything, that looks like a ip address, so also Broadcast Addresses, Wildcard Masks router ids........
+7. **Rest File Name History**
+   Changes the start date.
 
-so be careful, this manipulation has a lot of potential
+8. **Change OSPF Areas and OSPF Process IDs**
+   Does its best to adjust them.
 
-5. Change ipv6 Addresses exact the same like change ipv4 addresses, but with ipv6 addresses. 
+9. **Change ACL IPv4**
+   Does its best at renaming or renumbering IPv4 ACLs.
 
-these where the good ones the rest works, but really poorly
-
-6. Change DB Grading
-sets the persentage to 100% but by removing the criterias, so if the auditor does not check them by one it works, but if he, he will see it
-
-7. Rest File Name History
-changes the start date
-
-8. Change OSPFAreas and OSPFProcessIDs
-does it best to do it
-
-9. change ACLIpv4
-gives it best at renaming or renumbering ipv4 ACLs
-
-
-10. change ACLIpv6
-gives it best at renaming or renumbering ipv6 ACLs
+10. **Change ACL IPv6**
+    Does its best at renaming or renumbering IPv6 ACLs.
 
 ### Screenshots
 
 ![alt](imgs/FileSelect.png)<br>
-Here you can select your base file press the image in the middle and you are promted with a filechooser
+Here you can select your base file. Press the image in the middle to open a file chooser.
 
 ![alt](imgs/HomeScreen.png)<br>
-here you can edit and add manipulations and do the export
+Here you can add and edit manipulations and perform the export.
 
 ![alt](imgs/Manis.png)<br>
-here are all possible manipulations
+Here are all possible manipulations.
 
 ![alt](imgs/ChangeIpInAction.png)<br>
-here are all possible manipulations
+Here are all possible manipulations.
 ![alt](imgs/Finshed.png)<br>
-after the finished export
+After the finished export.
 
-### development
+### Development
 
-a pka or pkt file are just encrypted xml files, so they are fairly simple to manipulate
+A `.pka` or `.pkt` file is just an encrypted XML file, so it’s fairly simple to manipulate.
 
-1. do the platform independetnd install 
-2. implement a Mani(Manipulaton)
-    - create a new module this module needs three parts the 
-    - define the name of the manipulation
-    - define the manipulation function
-        - parameter: xml in etree format    
-        - returns: manipulated xml
-        - called on export
-    - define the settings function
-        - parameter: xml
-        - called after added to manipulation stack
-3. build use pyistaller
+1. Do the platform-independent install.
+2. Implement a **Mani** (manipulation):
 
+   * Create a new module. This module needs three parts:
+
+     * Define the name of the manipulation.
+     * Define the **manipulation function**
+
+       * **Parameter:** XML in `etree` format
+       * **Returns:** manipulated XML
+       * **Called on:** export
+     * Define the **settings function**
+
+       * **Parameter:** XML
+       * **Called after:** added to the manipulation stack
+3. Build using **PyInstaller**.
