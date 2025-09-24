@@ -14,7 +14,8 @@ He is a hero!!!
 
 ### It's not a virus
 
-![image](https://github.com/SwagmasterSwag/PTHelper/assets/149953265/d291edcb-0ec2-48ab-850b-ef3ac58dca59 | width=100)<br>
+<img src="https://github.com/SwagmasterSwag/PTHelper/assets/149953265/d291edcb-0ec2-48ab-850b-ef3ac58dca59" width="40%">
+<br>
 Just click **More** and then **Execute**. It’s open source, so you can verify what you’re running.
 
 ### Warning
